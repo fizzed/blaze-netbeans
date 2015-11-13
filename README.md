@@ -12,3 +12,9 @@ projects with an extra "Blaze Files" package.
 ![Thumbnail](https://github.com/fizzed/blaze-netbeans/blob/master/Thumbnail.png)
 
 ![Screenshot](https://github.com/fizzed/blaze-netbeans/blob/master/Screenshot.png)
+
+## Install
+
+Plugin is published to [Netbeans Plugin Portal](http://plugins.netbeans.org/plugin/61288)
+
+Download .nbm and install via Tools > Plugins > Downloaded > Add Plugin
