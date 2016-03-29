@@ -175,8 +175,8 @@
             </module-dependencies>
             <public-packages/>
             <class-path-extension>
-                <runtime-relative-path>ext/blaze-lite-0.5.0.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/blaze-lite-0.5.0.jar</binary-origin>
+                <runtime-relative-path>ext/blaze-lite-0.8.1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/blaze-lite-0.8.1.jar</binary-origin>
             </class-path-extension>
         </data>
     </configuration>

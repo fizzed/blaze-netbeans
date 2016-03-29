@@ -47,8 +47,13 @@ public class BlazeNodeFactory implements NodeFactory {
             FileObject p = project.getProjectDirectory();
             
             if (!blazeProject.getScriptRoots().contains(blazeProject.getProjectDir())) {
-                // lookup sub-dir
-                p = p.getFileObject("blaze");
+                // lookup sub-dirs
+                FileObject blazeDir = p.getFileObject(".blaze");
+                if (blazeDir == null) {
+                    // fallback to blaze
+                    blazeDir = p.getFileObject("blaze");
+                }
+                p = blazeDir;
             }
             
             if (p != null) {

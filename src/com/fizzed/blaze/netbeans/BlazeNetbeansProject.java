@@ -64,13 +64,19 @@ public class BlazeNetbeansProject {
     }
     
     public void onOpen() {
-        // root project direcotyr OR blaze directory?
+        // root project directory OR blaze dir OR .blaze dir
         // when within maven/ant project any sources at root project dir really screws things up
         // placing those in a separate directory solves the many problems it created
         if (BlazeProjects.isOnlyBlazed(projectDir)) {
             this.scriptRoots.add(projectDir);
         } else {
-            this.scriptRoots.add(new File(projectDir, "blaze"));
+            File dotBlazeDir = new File(projectDir, ".blaze");
+            if (dotBlazeDir.exists() && dotBlazeDir.isDirectory()) {
+                this.scriptRoots.add(dotBlazeDir);
+            } else {
+                // fallback to blaze dir
+                this.scriptRoots.add(new File(projectDir, "blaze"));
+            }
         }
         
         // build source classpath for script roots
