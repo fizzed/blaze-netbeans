@@ -1,7 +1,6 @@
 
 package com.fizzed.blaze.netbeans;
 
-import com.fizzed.blaze.core.BlazeProjects;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
