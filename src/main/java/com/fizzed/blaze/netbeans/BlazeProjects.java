@@ -1,6 +1,9 @@
-package com.fizzed.blaze.core;
+package com.fizzed.blaze.netbeans;
 
+import com.fizzed.blaze.core.Blaze;
+import com.fizzed.blaze.core.Dependency;
 import com.fizzed.blaze.internal.FileHelper;
+import com.fizzed.blaze.ivy.IvyDependencyResolver;
 import java.io.File;
 import java.util.HashSet;
 import java.util.List;
@@ -72,10 +75,22 @@ public class BlazeProjects {
      * @return A list of jar files that represent the complete list of dependencies
      */
     static public List<File> resolveScriptDependencies(File scriptFile) {
-        Blaze.Builder builder = Blaze.builder()
+        System.out.println("Resolving for " + scriptFile);
+        
+        Blaze.Builder builder = new Blaze.Builder()
+            .dependencyResolver(new IvyDependencyResolver())
             .file(scriptFile);
         
+        builder.configure();
+        
         builder.resolveDependencies();
+        
+        List<Dependency> dependencies = builder.getDependencies();
+        if (dependencies != null) {
+            for (Dependency d : dependencies) {
+                System.out.println(" dependency: " + d);
+            }
+        }
         
         // TODO: javadocs would be great to include as well...
         

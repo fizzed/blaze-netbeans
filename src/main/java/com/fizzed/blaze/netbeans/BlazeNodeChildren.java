@@ -1,7 +1,6 @@
 
 package com.fizzed.blaze.netbeans;
 
-import com.fizzed.blaze.core.BlazeProjects;
 import java.util.ArrayList;
 import java.util.List;
 import org.openide.nodes.FilterNode;

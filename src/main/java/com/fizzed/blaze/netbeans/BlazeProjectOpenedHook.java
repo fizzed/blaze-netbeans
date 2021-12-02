@@ -1,6 +1,5 @@
 package com.fizzed.blaze.netbeans;
 
-import com.fizzed.blaze.core.BlazeProjects;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
