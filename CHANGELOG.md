@@ -1,6 +1,11 @@
 Blaze Netbeans Plugin by Fizzed
 ===============================
 
+#### 2.0 - 2021-12-02
+
+ - Maven build process
+ - Support for modern versions of Netbeans (and install via new plugin portal)
+
 #### 1.2 - 2016-03-28
 
  - Support for `.blaze` sub directory for default blaze script
