@@ -18,8 +18,8 @@
     </properties>
 
     <scm>
-        <url>https://github.com/fizzed/bigmap</url>
-        <connection>scm:git:git@github.com:fizzed/bigmap.git</connection>
+        <url>https://github.com/fizzed/blaze-netbeans</url>
+        <connection>scm:git:git@github.com:fizzed/blaze-netbeans.git</connection>
         <tag>HEAD</tag>
     </scm>
 
