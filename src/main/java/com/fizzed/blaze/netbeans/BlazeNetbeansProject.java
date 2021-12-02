@@ -1,7 +1,6 @@
 
 package com.fizzed.blaze.netbeans;
 
-import com.fizzed.blaze.core.BlazeProjects;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
@@ -147,6 +146,11 @@ public class BlazeNetbeansProject {
 
                         List<File> dependencies = BlazeProjects.resolveScriptDependencies(scriptFile);
 
+                        // if no dependencies resolved, this could be blank
+                        if (dependencies == null) {
+                            dependencies = new ArrayList<>();
+                        }
+                        
                         for (File d : dependencies) {
                             LOG.log(Level.INFO,"Resolved blaze dependency {0}", d);
                         }
