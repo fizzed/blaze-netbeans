@@ -4,6 +4,7 @@ Blaze Netbeans Plugin by Fizzed
  - [Fizzed, Inc.](http://fizzed.com)
 
 ## Overview
+THIS REPO IS NO LONGER NEEDED/MAINTAINED. As of Blaze version 1.2.0+, IDE support can be accomplished thru a shadow maven pom.xml.
 
 Netbeans plugin for [Blaze](https://github.com/fizzed/blaze).  Supports opening
 projects with "blaze.jar" by themselves or enhances Maven, Ant, or Gradle 
